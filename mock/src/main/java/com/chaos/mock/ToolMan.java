@@ -7,5 +7,13 @@ import lombok.Setter;
 @Setter
 public class ToolMan {
 
-    private String name;
+    private String  name;
+
+    private Leg     leg;
+
+    private Foot    foot;
+
+    public Long getLegLength() {
+        return leg.getLength();
+    }
 }
