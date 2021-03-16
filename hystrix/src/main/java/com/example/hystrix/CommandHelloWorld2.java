@@ -7,6 +7,9 @@ import rx.Scheduler;
 import rx.Subscriber;
 import rx.schedulers.Schedulers;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
@@ -39,8 +42,8 @@ public class CommandHelloWorld2 extends HystrixObservableCommand<String> {
 
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        Observable<String> observable = new CommandHelloWorld2("Chaos").construct();
-        Future<String> string = observable.toBlocking().toFuture();
-        System.out.println(string.get());
+        List<String> list = new ArrayList<String>(4);
+        System.out.println(list.size());
     }
 }
+
