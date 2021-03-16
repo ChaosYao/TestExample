@@ -8,12 +8,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mock" />
+        <module name="hystrix" />
         <module name="TestExample" />
         <module name="grpc" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="grpc" target="6" />
+      <module name="hystrix" target="1.5" />
       <module name="mock" target="1.8" />
       <module name="TestExample" target="1.5" />
     </bytecodeTargetLevel>

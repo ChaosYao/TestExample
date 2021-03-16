@@ -3,6 +3,9 @@ package com.example.grpc;
 import TestExample.proto.GreeterGrpc;
 import TestExample.proto.HelloReply;
 import TestExample.proto.HelloRequest;
+
+import com.alibaba.fastjson.JSONObject;
+import com.googlecode.protobuf.format.JsonFormat;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 
@@ -17,7 +20,6 @@ public class GrpcClient {
         channel = ManagedChannelBuilder.forAddress(host, port)
                 .usePlaintext(true)
                 .build();
-
         blockingStub = GreeterGrpc.newBlockingStub(channel);
     }
 
@@ -28,7 +30,7 @@ public class GrpcClient {
     public void greet(String name) {
         HelloRequest request = HelloRequest.newBuilder().setName(name).build();
         HelloReply response = blockingStub.sayHello(request);
-        System.out.println(response.getMessage());
+        System.out.println(JsonFormat.printToString(response));
     }
 
     public static void main(String[] args) throws InterruptedException {

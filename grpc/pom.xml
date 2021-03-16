@@ -33,7 +33,17 @@
             <artifactId>grpc-stub</artifactId>
             <version>1.14.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.75</version>
+        </dependency>
 
+        <dependency>
+            <groupId>com.googlecode.protobuf-java-format</groupId>
+            <artifactId>protobuf-java-format</artifactId>
+            <version>1.2</version>
+        </dependency>
     </dependencies>
     <pluginRepositories><!-- 插件库 -->
         <pluginRepository>
