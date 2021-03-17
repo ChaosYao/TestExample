@@ -30,11 +30,14 @@ public class GrpcClient {
     public void greet(String name) {
         HelloRequest request = HelloRequest.newBuilder().setName(name).build();
         HelloReply response = blockingStub.sayHello(request);
-        System.out.println(JsonFormat.printToString(response));
+        JsonFormat jsonFormat = new JsonFormat();
+
+        System.out.println(jsonFormat.printToString(response));
     }
 
     public static void main(String[] args) throws InterruptedException {
         GrpcClient client = new GrpcClient("127.0.0.1", 50051);
         client.greet("Chaos");
     }
+
 }
