@@ -32,7 +32,7 @@ public class GrpcClient {
         HelloReply response = blockingStub.sayHello(request);
         JsonFormat jsonFormat = new JsonFormat();
 
-        System.out.println(jsonFormat.printToString(response));
+        System.out.println(JSONObject.parseObject(jsonFormat.printToString(response)));
     }
 
     public static void main(String[] args) throws InterruptedException {

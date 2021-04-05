@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Component/Component.iml" filepath="$PROJECT_DIR$/Component/Component.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/TestExample.iml" filepath="$PROJECT_DIR$/.idea/TestExample.iml" />
       <module fileurl="file://$PROJECT_DIR$/grpc/grpc.iml" filepath="$PROJECT_DIR$/grpc/grpc.iml" />
       <module fileurl="file://$PROJECT_DIR$/hystrix/hystrix.iml" filepath="$PROJECT_DIR$/hystrix/hystrix.iml" />
