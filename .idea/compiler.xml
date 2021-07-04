@@ -10,11 +10,13 @@
         <module name="mock" />
         <module name="hystrix" />
         <module name="Component" />
+        <module name="demo" />
         <module name="grpc" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Component" target="1.5" />
+      <module name="demo" target="1.5" />
       <module name="grpc" target="6" />
       <module name="hystrix" target="1.5" />
       <module name="mock" target="1.8" />
