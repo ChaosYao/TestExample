@@ -26,10 +26,17 @@ public class DataBusHandler {
         DataBusHandler dataBusHandler = new DataBusHandler();
         TestListener1 testListener1 = new TestListener1();
         TestListener2 testListener2 = new TestListener2();
+        TestListener3 testListener3 = new TestListener3();
         dataBusHandler.addTestListener1(testListener1);
         dataBusHandler.addTestListener1(testListener2);
+        dataBusHandler.addTestListener1(testListener3);
         for (int i = 0; i < 10; i++) {
             dataBusHandler.processTestHandler1("t");
+        }
+
+        System.out.println("--------------");
+        for (int i = 0; i < 10; i++) {
+            dataBusHandler.processTestHandler1(1);
         }
     }
     //根据参数类型来派发，如果参数类型能匹配到多个方法，多个subscribe方法都会执行

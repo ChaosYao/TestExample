@@ -8,11 +8,11 @@ import com.google.common.eventbus.Subscribe;
 /**
  *
  * @author leping
- * @version $Id: TestListener2.java, v 0.1 2021-07-13 下午6:41 leping Exp $$
+ * @version $Id: TestListener3.java, v 0.1 2021-07-13 下午7:02 leping Exp $$
  */
-public class TestListener2 implements NodeListener{
+public class TestListener3 implements NodeListener {
     @Subscribe
     public void execute(String msg) {
-        System.out.println("test2" + msg);
+        System.out.println("test3:" + msg);
     }
 }
