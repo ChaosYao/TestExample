@@ -12,7 +12,7 @@ import com.google.common.eventbus.Subscribe;
  */
 public class TestListener1 implements NodeListener {
     @Subscribe
-    public void execute(String msg, Integer num) {
-        System.out.println("test1:" + msg + num);
+    public void execute(Integer msg) {
+        System.out.println("test1:" + msg) ;
     }
 }
